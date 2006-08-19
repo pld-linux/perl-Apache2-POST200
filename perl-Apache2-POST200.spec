@@ -2,12 +2,12 @@
 # Conditional build:
 %bcond_without	tests		# do not perform "make test"
 #
-%define	apxs	/usr/sbin/apxs
 %include	/usr/lib/rpm/macros.perl
+%define	apxs	/usr/sbin/apxs
 %define	pdir	Apache2
 %define	pnam	POST200
-Summary:	Apache2::POST200 - Converting code 200 responses to POST requests to 302
-#Summary(pl):	
+Summary:	Apache2::POST200 - converting code 200 responses to POST requests to 302
+Summary(pl):	Apache2::POST200 - konwersja kodów odpowiedzi 200 na ¿±dania POST 302
 Name:		perl-Apache2-POST200
 Version:	0.05
 Release:	1
@@ -27,18 +27,28 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-This module inserts an request output filter that looks for replies for
-POST requests with a HTTP code of 200. If it finds one it saves the reply
-in a database and replaces the complete output with a temporary redirect
-(HTTP code 302) to the same URL but with a special marked query string
-appended.
+This module inserts an request output filter that looks for replies
+for POST requests with a HTTP code of 200. If it finds one it saves
+the reply in a database and replaces the complete output with a
+temporary redirect (HTTP code 302) to the same URL but with a special
+marked query string appended.
 
 When the browser follows the redirect the module recognizes the query
 string and routes the request to its own response handler. The handler
-then reads the saved page from the database and sends it to the browser.
+then reads the saved page from the database and sends it to the
+browser.
 
-# %description -l pl
-# TODO
+%description -l pl
+Ten modu³ wstawia filtr wyj¶ciowy ¿±dañ szukaj±cy odpowiedzi na
+¿±dania POST z kodem HTTP 200. W przypadku napotkania takiego zapisuje
+odpowied¼ w bazie danych i zastêpuje ca³e wyj¶cie tymczasowym
+przekierowaniem (kod HTTP 302) do tego samego URL-a, ale z do³±czonym
+specjalnie oznaczonym ³añcuchem zapytania.
+
+Kiedy przegl±darka pod±¿y za przekierowaniem, modu³ rozpoznaje ³añcuch
+zapytania i przekazuje ¿±danie do w³asnej procedury obs³ugi
+odpowiedzi. Procedura ta odczytuje stronê zapisan± w bazie danych i
+wysy³a do przegl±darki.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
