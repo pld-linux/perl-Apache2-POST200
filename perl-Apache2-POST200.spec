@@ -10,7 +10,7 @@ Summary:	Apache2::POST200 - converting code 200 responses to POST requests to 30
 Summary(pl):	Apache2::POST200 - konwersja kodów odpowiedzi 200 na ¿±dania POST 302
 Name:		perl-Apache2-POST200
 Version:	0.05
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
@@ -23,6 +23,7 @@ BuildRequires:	perl-Apache-Test
 BuildRequires:	perl-Digest-CRC
 BuildRequires:	perl-mod_perl >= 2.000002
 %endif
+Requires:	perl-dirs >= 1.0-4
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
