@@ -7,7 +7,7 @@
 %define	pdir	Apache2
 %define	pnam	POST200
 Summary:	Apache2::POST200 - converting code 200 responses to POST requests to 302
-Summary(pl.UTF-8):   Apache2::POST200 - konwersja kodów odpowiedzi 200 na żądania POST 302
+Summary(pl.UTF-8):	Apache2::POST200 - konwersja kodów odpowiedzi 200 na żądania POST 302
 Name:		perl-Apache2-POST200
 Version:	0.05
 Release:	2
