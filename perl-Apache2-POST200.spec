@@ -7,7 +7,7 @@
 %define	pdir	Apache2
 %define	pnam	POST200
 Summary:	Apache2::POST200 - converting code 200 responses to POST requests to 302
-Summary(pl):	Apache2::POST200 - konwersja kodów odpowiedzi 200 na ¿±dania POST 302
+Summary(pl.UTF-8):   Apache2::POST200 - konwersja kodÃ³w odpowiedzi 200 na Å¼Ä…dania POST 302
 Name:		perl-Apache2-POST200
 Version:	0.05
 Release:	2
@@ -39,17 +39,17 @@ string and routes the request to its own response handler. The handler
 then reads the saved page from the database and sends it to the
 browser.
 
-%description -l pl
-Ten modu³ wstawia filtr wyj¶ciowy ¿±dañ szukaj±cy odpowiedzi na
-¿±dania POST z kodem HTTP 200. W przypadku napotkania takiego zapisuje
-odpowied¼ w bazie danych i zastêpuje ca³e wyj¶cie tymczasowym
-przekierowaniem (kod HTTP 302) do tego samego URL-a, ale z do³±czonym
-specjalnie oznaczonym ³añcuchem zapytania.
+%description -l pl.UTF-8
+Ten moduÅ‚ wstawia filtr wyjÅ›ciowy Å¼Ä…daÅ„ szukajÄ…cy odpowiedzi na
+Å¼Ä…dania POST z kodem HTTP 200. W przypadku napotkania takiego zapisuje
+odpowiedÅº w bazie danych i zastÄ™puje caÅ‚e wyjÅ›cie tymczasowym
+przekierowaniem (kod HTTP 302) do tego samego URL-a, ale z doÅ‚Ä…czonym
+specjalnie oznaczonym Å‚aÅ„cuchem zapytania.
 
-Kiedy przegl±darka pod±¿y za przekierowaniem, modu³ rozpoznaje ³añcuch
-zapytania i przekazuje ¿±danie do w³asnej procedury obs³ugi
-odpowiedzi. Procedura ta odczytuje stronê zapisan± w bazie danych i
-wysy³a do przegl±darki.
+Kiedy przeglÄ…darka podÄ…Å¼y za przekierowaniem, moduÅ‚ rozpoznaje Å‚aÅ„cuch
+zapytania i przekazuje Å¼Ä…danie do wÅ‚asnej procedury obsÅ‚ugi
+odpowiedzi. Procedura ta odczytuje stronÄ™ zapisanÄ… w bazie danych i
+wysyÅ‚a do przeglÄ…darki.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
