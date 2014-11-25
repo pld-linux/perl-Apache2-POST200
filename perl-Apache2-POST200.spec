@@ -1,11 +1,11 @@
 #
 # Conditional build:
 %bcond_without	tests		# do not perform "make test"
-#
-%include	/usr/lib/rpm/macros.perl
+
 %define	apxs	/usr/sbin/apxs
 %define	pdir	Apache2
 %define	pnam	POST200
+%include	/usr/lib/rpm/macros.perl
 Summary:	Apache2::POST200 - converting code 200 responses to POST requests to 302
 Summary(pl.UTF-8):	Apache2::POST200 - konwersja kodów odpowiedzi 200 na żądania POST 302
 Name:		perl-Apache2-POST200
@@ -16,6 +16,7 @@ License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	fdf227479b223afc1cea90f7b217cf4d
+URL:		http://search.cpan.org/dist/Apache2-POST200/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
